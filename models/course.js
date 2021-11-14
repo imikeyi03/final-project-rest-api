@@ -34,9 +34,16 @@ module.exports = (sequelize) => {
         },
         materialsNeeded: {
             type: DataTypes.STRING,
-        },
-        userId: {
-            
         }
-    })
+    }, {sequelize, modelName: 'Course'});
+    
+    Course.associate = (models) =>{
+        Course.belongsTo(models.User,{
+            as: 'Owner',
+            foreignKey:{
+                fieldName: 'userId'
+            }
+        })
+    }
+      return Course;
 }
