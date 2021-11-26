@@ -1,0 +1,10 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "database": "fsjstd-restapi.db",
+            "name": "project 9 final"
+        }
+    ]
+}
